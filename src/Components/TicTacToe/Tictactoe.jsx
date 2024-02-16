@@ -23,7 +23,8 @@ const TicTacToe = () => {
   let box_array = [box1, box2, box3, box4, box5, box6, box7, box8, box9];
 
   const toggle = (e, num) => {
-    if(lock) {
+
+    if(lock || data[num] !== '') {
       return 0;
     }
     if(count%2===0) {
